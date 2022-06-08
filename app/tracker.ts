@@ -16,7 +16,7 @@ export function startTracker(config: TrackerConfig) {
     let userId = "";
     
     (async () => {
-        Tracker  = await import('@openreplay/tracker')
+        Tracker  = (await import('@openreplay/tracker')).default
         console.log(Tracker)
         
         console.log("Starting tracker...")
